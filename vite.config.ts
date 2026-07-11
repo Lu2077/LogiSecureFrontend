@@ -1,17 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path"; // <-- 1. Importamos la herramienta de rutas de Node
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    port: 8082,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path,
-      }
-    }
-  }
-})
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"), // <-- 2. MAPEADO MÁGICO: Vincula el @ con la carpeta src
+    },
+  },
+});
