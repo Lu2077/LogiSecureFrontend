@@ -1,5 +1,0 @@
-{
-  "framework": "nitro",
-  "buildCommand": "vite build",
-  "outputDirectory": ".output"
-}
