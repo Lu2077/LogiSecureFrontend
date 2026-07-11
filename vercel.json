@@ -1,8 +1,5 @@
 {
-  "framework": "vite",
+  "framework": "nitro",
   "buildCommand": "vite build",
-  "outputDirectory": "dist",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "outputDirectory": ".output"
 }
