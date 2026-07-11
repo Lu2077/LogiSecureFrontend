@@ -3,4 +3,3 @@
   "buildCommand": "vite build",
   "outputDirectory": ".output"
 }
-
